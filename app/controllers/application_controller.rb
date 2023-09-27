@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
   
   def after_sign_in_path_for(resource)
     if current_user
-    flash[:notice] = "Signed in successfully."
     user_path(current_user)
     else
     user_session_path
@@ -12,7 +11,6 @@ class ApplicationController < ActionController::Base
   end
   
   def after_sign_out_path_for(resource)
-    flash[:notice] = "Signed out successfully."
     root_path
   end
 

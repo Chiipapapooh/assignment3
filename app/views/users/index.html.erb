@@ -19,7 +19,7 @@
       <div class="row">
         <button type="button" class="btn btn-light">
         <%= link_to edit_user_path(current_user) do %>
-        <i class="fa-solid fa-user-gear"></i>   
+        <i class="fas fa-user-cog"></i>   
         <% end %>
         </button>
       </div>
@@ -41,7 +41,7 @@
         <%= f.text_area :body %>
       </div>
       <div class="form-group">
-        <%= f.submit 'Create Book' %>
+        <%= f.submit 'Create Book', class: "btn btn-success" %>
       </div>
       <% end %>
       </div>
@@ -65,7 +65,7 @@
           <%= user.name %>
           </td>
           <td>
-            <%= link_to "show", user_path(user.id) %>
+            <%= link_to "Show", user_path(user.id) %>
           </td>
           </tr>
           <% end %>
